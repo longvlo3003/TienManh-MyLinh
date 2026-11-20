@@ -1,0 +1,822 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* MÀU SẮC CHUNG */
+:root {
+  --bg: #fafaf7;
+  --text: #48594f;
+  --green: #90ab9c;
+  --light: #f0f4ee;
+  --gold: #e8d8ac;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(29px, 5vw, 45px);
+}
+
+p {
+  line-height: 1.8;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--green);
+}
+
+.handwriting {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(54px, 9vw, 85px);
+}
+
+.ornament {
+  font-size: 38px;
+  color: var(--green);
+  margin: 24px auto;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 28px;
+  border: 1px solid var(--green);
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #527964;
+  outline-offset: 4px;
+}
+
+/* ============================
+   MÀN HÌNH MỞ THIỆP
+============================ */
+
+.cover {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background: #bdc9bf;
+}
+
+.cover > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.coverShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 20%,
+    rgba(0,0,0,.15) 45%,
+    rgba(0,0,0,.72) 100%
+  );
+}
+
+.coverText {
+  position: absolute;
+  bottom: 7%;
+  left: 15px;
+  right: 15px;
+  z-index: 2;
+  color: white;
+}
+
+.coverText .eyebrow {
+  color: white;
+}
+
+.coverText h1 {
+  font-size: clamp(37px, 7vw, 66px);
+  line-height: 1.35;
+  margin: 14px 0;
+}
+
+#coverDate {
+  letter-spacing: 5px;
+}
+
+.openButton {
+  background: white;
+  border-color: white;
+  color: var(--text);
+  font-weight: bold;
+  animation: glow 2.5s ease-in-out infinite;
+}
+
+.smallNote {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 #ffffff50;
+  }
+  50% {
+    box-shadow: 0 0 0 9px #ffffff15;
+  }
+}
+
+/* ============================
+   ẢNH CHÍNH
+============================ */
+
+.hero {
+  height: 90vh;
+  height: 90svh;
+  position: relative;
+  background: #dbe5dd;
+  overflow: hidden;
+}
+
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.heroText {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 70px 16px 30px;
+  color: white;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.7)
+  );
+}
+
+.heroText .eyebrow {
+  color: white;
+}
+
+.heroText h1 {
+  font-size: clamp(35px, 7vw, 65px);
+}
+
+/* ============================
+   CÁC PHẦN THÔNG TIN
+============================ */
+
+.section {
+  max-width: 1100px;
+  padding: 75px 20px;
+  margin: auto;
+}
+
+.warmSection {
+  background: var(--light);
+  max-width: none;
+}
+
+.invitationSection {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      #e0eee350,
+      transparent 37%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      #e0eee350,
+      transparent 37%
+    );
+}
+
+.families {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 920px;
+  margin: 45px auto;
+}
+
+.familyCard {
+  padding: 30px 18px;
+  border: 1px solid #d6e2d7;
+  border-radius: 15px;
+  background: #ffffffdd;
+  box-shadow: 0 8px 25px #67846c12;
+}
+
+.familyCard h3 {
+  font-size: 21px;
+}
+
+.message {
+  max-width: 570px;
+  margin: 35px auto 0;
+  padding: 25px;
+  border-top: 1px solid #d9e5db;
+  font-style: italic;
+  line-height: 2;
+  color: #829587;
+}
+
+/* ============================
+   NGÀY CƯỚI VÀ ĐẾM NGƯỢC
+============================ */
+
+.eventCard {
+  max-width: 575px;
+  margin: 25px auto;
+  padding: 30px 20px;
+  border: 1px solid #d5e0d5;
+  border-radius: 15px;
+  background: #ffffffd8;
+}
+
+.eventCard h3 {
+  font-size: 30px;
+}
+
+.eventTime {
+  font-size: 22px;
+  font-weight: bold;
+  color: #789987;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.countBox {
+  min-width: 72px;
+  padding: 14px 10px;
+  border: 1px solid #d5e0d5;
+  border-radius: 10px;
+  background: white;
+}
+
+.countBox strong {
+  display: block;
+  font-size: 26px;
+  color: var(--green);
+}
+
+.countBox span {
+  font-size: 12px;
+}
+
+/* ============================
+   ALBUM ẢNH CƯỚI
+============================ */
+
+.albumSection {
+  max-width: 1200px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.photoTile {
+  display: block;
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.photoTile img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform .4s ease;
+}
+
+.photoTile:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================
+   GOOGLE MAPS
+============================ */
+
+#mapFrame {
+  display: block;
+  width: 100%;
+  height: 400px;
+  margin: 25px auto;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px #00000012;
+}
+
+/* ============================
+   HỘP QUÀ CÓ CHUYỂN ĐỘNG
+============================ */
+
+.giftSection {
+  padding-top: 80px;
+  padding-bottom: 95px;
+}
+
+.giftSection > p {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.giftButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 35px auto 0;
+  padding: 16px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.giftShape {
+  display: block;
+  position: relative;
+  width: 160px;
+  height: 160px;
+  transform-origin: center bottom;
+  animation: giftFloat 3s ease-in-out infinite;
+  transition: scale .2s, rotate .2s;
+}
+
+.giftBody {
+  position: absolute;
+  left: 17px;
+  bottom: 7px;
+  width: 126px;
+  height: 94px;
+  border-radius: 7px;
+  background: linear-gradient(
+    135deg,
+    #d8eadb,
+    #8ead9d
+  );
+  box-shadow: 0 12px 25px #62866d40;
+}
+
+.giftBodyRibbon {
+  position: absolute;
+  z-index: 2;
+  left: 72px;
+  bottom: 7px;
+  width: 16px;
+  height: 94px;
+  background: #f8eac9;
+}
+
+.giftTop {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 85px;
+  transform-origin: 85% 70%;
+  transition: transform .35s ease;
+}
+
+.giftLid {
+  position: absolute;
+  left: 8px;
+  top: 47px;
+  width: 144px;
+  height: 30px;
+  border-radius: 6px;
+  background: linear-gradient(
+    135deg,
+    #edf6eb,
+    #a7c7b2
+  );
+  box-shadow: 0 5px 12px #70887528;
+}
+
+.giftLidRibbon {
+  position: absolute;
+  left: 72px;
+  top: 47px;
+  width: 16px;
+  height: 30px;
+  background: #f8eac9;
+}
+
+.giftBowLeft,
+.giftBowRight {
+  position: absolute;
+  top: 17px;
+  width: 47px;
+  height: 31px;
+  border: 9px solid #f7e7c2;
+  border-radius: 55% 50% 20% 55%;
+  background: #b3cfba;
+}
+
+.giftBowLeft {
+  left: 34px;
+  transform: rotate(25deg);
+}
+
+.giftBowRight {
+  right: 34px;
+  transform: rotate(155deg);
+}
+
+.giftKnot {
+  position: absolute;
+  left: 72px;
+  top: 39px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #f7e7c2;
+}
+
+.giftHint {
+  font-size: 17px;
+  font-weight: bold;
+  color: #779584;
+}
+
+/* Khi đưa chuột vào */
+.giftButton:hover .giftTop,
+.giftButton:focus-visible .giftTop {
+  transform: translateY(-11px) rotate(-4deg);
+}
+
+/* Khi nhấn giữ */
+.giftButton:active .giftShape {
+  animation-play-state: paused;
+  scale: .93;
+  rotate: -4deg;
+}
+
+/* Khi bấm mở */
+.giftButton.opening .giftTop {
+  transform: translateY(-45px) rotate(-12deg);
+}
+
+@keyframes giftFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ============================
+   POPUP MỘT MÃ QR
+============================ */
+
+.giftDialog {
+  width: min(92vw, 480px);
+  max-height: 90vh;
+  max-height: 90dvh;
+  padding: 35px 20px;
+  border: 1px solid #d7e2d7;
+  border-radius: 20px;
+  background: #fefefa;
+  color: var(--text);
+  text-align: center;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px #0003;
+}
+
+.giftDialog::backdrop {
+  background: rgba(24, 35, 29, .7);
+  backdrop-filter: blur(4px);
+}
+
+.closeDialog {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #ebf1ec;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qrCard {
+  max-width: 345px;
+  padding: 24px 18px;
+  margin: 25px auto;
+  border: 1px solid #d8e2d8;
+  border-radius: 15px;
+  background: white;
+}
+
+.qrCard h3 {
+  font-size: 25px;
+  color: #739582;
+}
+
+.qrCard img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  max-height: 310px;
+  margin: 15px auto;
+  object-fit: contain;
+}
+
+.qrCard strong {
+  display: block;
+  color: #5f8270;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+.giftThanks {
+  color: #8aa597;
+  font-style: italic;
+}
+
+/* ============================
+   CÁNH HOA XANH NHẠT
+============================ */
+
+.petalLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  width: 14px;
+  height: 20px;
+  opacity: 0;
+  border-radius: 75% 8% 70% 25%;
+  background: #d7e6da;
+  box-shadow:
+    inset 2px 2px 4px #ffffff80,
+    0 1px 3px #8da99520;
+  will-change: transform, opacity;
+}
+
+.petal::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 1px;
+  height: 48%;
+  background: #ffffff85;
+  transform: rotate(15deg);
+}
+
+/* Chuyển động của hoa được điều khiển
+   tự động trong script.js */
+
+/* ============================
+   HIỆU ỨNG CHỮ, ẢNH KHI CUỘN
+============================ */
+
+/*
+  Chỉ ẩn nội dung khi JavaScript
+  đã khởi động thành công.
+*/
+
+body.revealOn #site .reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  filter: blur(3px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(.2,.7,.2,1),
+    filter 1s ease;
+}
+
+body.revealOn #site .reveal.fromLeft {
+  transform: translateX(-45px);
+}
+
+body.revealOn #site .reveal.fromRight {
+  transform: translateX(45px);
+}
+
+body.revealOn #site .photoTile.reveal {
+  transform: translateY(42px) scale(.97);
+  filter: blur(5px);
+}
+
+body.revealOn #site .reveal.shown {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+/* ============================
+   NÚT BẬT / TẮT NHẠC
+============================ */
+
+.musicBtn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 100;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #0002;
+}
+
+/* ============================
+   PHÓNG TO ẢNH
+============================ */
+
+.photoDialog {
+  width: min(95vw, 900px);
+  max-height: 94vh;
+  padding: 12px;
+  border: none;
+  background: #191919;
+}
+
+.photoDialog::backdrop {
+  background: #000c;
+}
+
+.photoDialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 82vh;
+  margin: auto;
+  object-fit: contain;
+}
+
+.closePhoto {
+  display: block;
+  margin: 0 0 10px auto;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ============================
+   CUỐI THIỆP
+============================ */
+
+footer {
+  padding: 75px 20px;
+  background: #e8eee7;
+}
+
+/* ============================
+   GIAO DIỆN ĐIỆN THOẠI
+============================ */
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 55px 15px;
+  }
+
+  .families {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    gap: 7px;
+  }
+
+  .photoTile img {
+    height: 270px;
+  }
+
+  .coverText h1 {
+    font-size: 39px;
+  }
+
+  .countBox {
+    min-width: 60px;
+    padding: 12px 7px;
+  }
+
+  .countBox strong {
+    font-size: 22px;
+  }
+
+  #mapFrame {
+    height: 310px;
+  }
+
+  .giftDialog {
+    padding: 30px 15px;
+  }
+
+  body.revealOn #site .reveal {
+    transform: translateY(25px);
+  }
+
+  body.revealOn #site .reveal.fromLeft {
+    transform: translateX(-22px);
+  }
+
+  body.revealOn #site .reveal.fromRight {
+    transform: translateX(22px);
+  }
+
+  body.revealOn #site .reveal.shown {
+    transform: none;
+  }
+}
+
+/* Khi người xem bật chế độ giảm chuyển động,
+   chữ vẫn hiện đầy đủ và không gây chóng mặt. */
+
+@media (prefers-reduced-motion: reduce) {
+
+  body.revealOn #site .reveal,
+  body.revealOn #site .reveal.shown {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .giftShape,
+  .openButton {
+    animation: none;
+  }
+}

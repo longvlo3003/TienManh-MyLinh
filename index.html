@@ -1,0 +1,1535 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f9faf7">
+<title>Thiệp cưới Tiến Mạnh & Mỹ Linh</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* MÀU SẮC VÀ PHÔNG CHỮ */
+:root {
+  --bg: #fafaf7;
+  --text: #4b5b51;
+  --green: #8eaa9a;
+  --soft: #f0f4ef;
+  --gold: #decda7;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+[hidden] { display: none !important; }
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+}
+
+h2 { font-size: clamp(30px, 5vw, 45px); }
+
+p { line-height: 1.8; }
+
+.eyebrow {
+  color: var(--green);
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.ornament {
+  margin: 22px auto;
+  color: var(--green);
+  font-size: 38px;
+}
+
+.handwriting {
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(56px, 9vw, 88px);
+  line-height: 1.3;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 25px;
+  margin: 14px 6px;
+  border: 1px solid var(--green);
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+
+.button:hover { transform: translateY(-3px); }
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #517664;
+  outline-offset: 4px;
+}
+
+/* MÀN HÌNH MỞ THIỆP */
+.cover {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background: #bdc9bf;
+}
+
+.cover > img,
+.hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.coverShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 20%,
+    rgba(0,0,0,.15) 45%,
+    rgba(0,0,0,.74) 100%
+  );
+}
+
+.coverText {
+  position: absolute;
+  bottom: 7%;
+  left: 15px;
+  right: 15px;
+  z-index: 2;
+  color: white;
+}
+
+.coverText .eyebrow { color: white; }
+
+.coverText h1 {
+  font-size: clamp(37px, 7vw, 68px);
+  line-height: 1.35;
+}
+
+.coverDate { letter-spacing: 4px; }
+
+.openButton {
+  background: white;
+  border-color: white;
+  color: var(--text);
+  font-weight: bold;
+  animation: glowing 2.5s ease-in-out infinite;
+}
+
+@keyframes glowing {
+  0%,100% { box-shadow: 0 0 0 0 #ffffff40; }
+  50% { box-shadow: 0 0 0 9px #ffffff16; }
+}
+
+/* ẢNH CHÍNH */
+.hero {
+  position: relative;
+  height: 88vh;
+  height: 88svh;
+  overflow: hidden;
+  background: #dce6de;
+}
+
+.heroText {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 70px 16px 30px;
+  color: white;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.7)
+  );
+}
+
+.heroText .eyebrow { color: white; }
+
+.heroText h1 {
+  font-size: clamp(35px, 7vw, 65px);
+}
+
+/* CÁC PHẦN NỘI DUNG */
+.section {
+  max-width: 1100px;
+  padding: 75px 20px;
+  margin: auto;
+}
+
+.warm {
+  max-width: none;
+  background: var(--soft);
+}
+
+.families {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 920px;
+  margin: 40px auto;
+}
+
+.family {
+  padding: 28px 18px;
+  border: 1px solid #d6e2d7;
+  border-radius: 14px;
+  background: #ffffffd9;
+  box-shadow: 0 8px 25px #72887312;
+}
+
+.family h3 { font-size: 21px; }
+
+.message {
+  max-width: 590px;
+  padding: 25px;
+  margin: 35px auto 0;
+  border-top: 1px solid #dbe7dd;
+  color: #819487;
+  font-style: italic;
+  line-height: 2;
+}
+
+/* THÔNG TIN LỄ CƯỚI */
+.eventCard {
+  max-width: 590px;
+  padding: 30px 20px;
+  margin: 25px auto;
+  background: #ffffffdf;
+  border: 1px solid #d6e2d7;
+  border-radius: 15px;
+}
+
+.eventCard h3 {
+  margin-bottom: 12px;
+  font-size: 29px;
+}
+
+.eventTime {
+  color: #779785;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.lunarDate {
+  color: #9b8766;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.eventDate {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px auto;
+}
+
+.countBox {
+  min-width: 75px;
+  padding: 13px 10px;
+  border: 1px solid #d6e2d7;
+  border-radius: 9px;
+  background: white;
+}
+
+.countBox strong {
+  display: block;
+  color: var(--green);
+  font-size: 26px;
+}
+
+.countBox span { font-size: 12px; }
+
+/* ALBUM ẢNH CƯỚI */
+.albumSection { max-width: 1200px; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.gallery button {
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform .4s ease;
+}
+
+.gallery button:hover img {
+  transform: scale(1.04);
+}
+
+/* GOOGLE MAPS */
+#mapFrame {
+  display: block;
+  width: 100%;
+  height: 390px;
+  margin: 25px auto;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px #00000012;
+}
+
+/* HỘP QUÀ MỪNG */
+.giftButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+  margin: 35px auto;
+  padding: 15px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.giftShape {
+  position: relative;
+  display: block;
+  width: 160px;
+  height: 160px;
+  animation: giftFloat 3s ease-in-out infinite;
+  transform-origin: center bottom;
+  transition: scale .2s, rotate .2s;
+}
+
+.giftBody {
+  position: absolute;
+  left: 17px;
+  bottom: 7px;
+  width: 126px;
+  height: 94px;
+  border-radius: 7px;
+  background: linear-gradient(135deg,#d7e9db,#8dac9a);
+  box-shadow: 0 12px 25px #64836b40;
+}
+
+.giftBodyRibbon {
+  position: absolute;
+  left: 72px;
+  bottom: 7px;
+  z-index: 2;
+  width: 16px;
+  height: 94px;
+  background: #f9e9c8;
+}
+
+.giftTop {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 85px;
+  transform-origin: 85% 70%;
+  transition: transform .35s ease;
+}
+
+.giftLid {
+  position: absolute;
+  left: 8px;
+  top: 47px;
+  width: 144px;
+  height: 30px;
+  border-radius: 6px;
+  background: linear-gradient(135deg,#eef6eb,#a6c8b2);
+  box-shadow: 0 5px 12px #70887528;
+}
+
+.giftLidRibbon {
+  position: absolute;
+  left: 72px;
+  top: 47px;
+  width: 16px;
+  height: 30px;
+  background: #f9e9c8;
+}
+
+.giftBowLeft,
+.giftBowRight {
+  position: absolute;
+  top: 17px;
+  width: 47px;
+  height: 31px;
+  border: 9px solid #f7e7c2;
+  border-radius: 55% 50% 20% 55%;
+  background: #b3cfba;
+}
+
+.giftBowLeft {
+  left: 34px;
+  transform: rotate(25deg);
+}
+
+.giftBowRight {
+  right: 34px;
+  transform: rotate(155deg);
+}
+
+.giftKnot {
+  position: absolute;
+  left: 72px;
+  top: 39px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #f7e7c2;
+}
+
+.giftHint {
+  color: #789684;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.giftButton:hover .giftTop,
+.giftButton:focus-visible .giftTop {
+  transform: translateY(-12px) rotate(-4deg);
+}
+
+.giftButton:active .giftShape {
+  animation-play-state: paused;
+  scale: .93;
+  rotate: -4deg;
+}
+
+.giftButton.opening .giftTop {
+  transform: translateY(-45px) rotate(-12deg);
+}
+
+@keyframes giftFloat {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* POPUP QR */
+.giftDialog {
+  width: min(92vw,480px);
+  max-height: 90vh;
+  max-height: 90dvh;
+  padding: 35px 20px;
+  border: 1px solid #d7e2d7;
+  border-radius: 20px;
+  background: #fefefa;
+  color: var(--text);
+  text-align: center;
+  overflow-y: auto;
+}
+
+.giftDialog::backdrop {
+  background: rgba(20,30,24,.72);
+  backdrop-filter: blur(4px);
+}
+
+.closeDialog {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #edf2ed;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.qrCard {
+  max-width: 340px;
+  padding: 23px 17px;
+  margin: 25px auto;
+  border: 1px solid #d7e2d7;
+  border-radius: 14px;
+  background: white;
+}
+
+.qrCard img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  max-height: 300px;
+  margin: 15px auto;
+  object-fit: contain;
+}
+
+.qrCard strong {
+  display: block;
+  color: #628371;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+/* CÁNH HOA XANH NHẠT */
+.petalLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.petal {
+  position: absolute;
+  top: -35px;
+  width: 15px;
+  height: 21px;
+  border-radius: 75% 9% 70% 25%;
+  background: #d9e8dd;
+  box-shadow: inset 2px 2px 4px #ffffff80;
+  pointer-events: none;
+
+  animation:
+    petalFall var(--duration,14s)
+    linear var(--delay,0s) infinite;
+}
+
+.petal::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  width: 1px;
+  height: 48%;
+  background: #ffffff85;
+  transform: rotate(15deg);
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0,-35px,0) rotate(0deg);
+    opacity: 0;
+  }
+
+  12% { opacity: var(--alpha,.55); }
+
+  26% {
+    transform:
+      translate3d(var(--x1),27vh,0) rotate(90deg);
+  }
+
+  50% {
+    transform:
+      translate3d(var(--x2),53vh,0) rotate(205deg);
+  }
+
+  77% {
+    transform:
+      translate3d(var(--x3),82vh,0) rotate(340deg);
+    opacity: var(--alpha,.55);
+  }
+
+  100% {
+    transform:
+      translate3d(var(--x4),115vh,0) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+/* HIỆU ỨNG CHỮ, ẢNH KHI CUỘN */
+html.motion-ready #main [data-reveal] {
+  opacity: 0;
+  transform: translateY(45px);
+  filter: blur(4px);
+
+  transition:
+    opacity 1.05s ease,
+    transform 1.05s cubic-bezier(.2,.7,.2,1),
+    filter 1.05s ease;
+}
+
+html.motion-ready #main [data-reveal="left"] {
+  transform: translateX(-50px);
+}
+
+html.motion-ready #main [data-reveal="right"] {
+  transform: translateX(50px);
+}
+
+html.motion-ready #main [data-reveal="photo"] {
+  transform: translateY(48px) scale(.95);
+  filter: blur(6px);
+}
+
+html.motion-ready #main [data-reveal].shown {
+  opacity: 1;
+  transform: none;
+  filter: blur(0);
+}
+
+/* NHẠC NỀN */
+.musicBtn {
+  position: fixed;
+  z-index: 100;
+  bottom: 18px;
+  right: 18px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 30px;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #0002;
+}
+
+/* ẢNH PHÓNG TO */
+.photoDialog {
+  max-width: 96vw;
+  max-height: 94vh;
+  padding: 12px;
+  border: 0;
+  background: #191919;
+}
+
+.photoDialog::backdrop { background: #000c; }
+
+.photoDialog img {
+  display: block;
+  max-width: 100%;
+  max-height: 82vh;
+  margin: auto;
+  object-fit: contain;
+}
+
+.closePhoto {
+  display: block;
+  margin: 0 0 10px auto;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 75px 20px;
+  background: #e8eee7;
+}
+
+/* GIAO DIỆN ĐIỆN THOẠI */
+@media (max-width:600px) {
+  .section { padding: 55px 15px; }
+
+  .families { grid-template-columns: 1fr; }
+
+  .gallery { gap: 7px; }
+
+  .gallery img { height: 265px; }
+
+  .countBox {
+    min-width: 61px;
+    padding: 12px 7px;
+  }
+
+  .countBox strong { font-size: 22px; }
+
+  #mapFrame { height: 310px; }
+
+  .coverText h1 { font-size: 39px; }
+
+  html.motion-ready
+  #main [data-reveal="left"] {
+    transform: translateX(-22px);
+  }
+
+  html.motion-ready
+  #main [data-reveal="right"] {
+    transform: translateX(22px);
+  }
+
+  html.motion-ready
+  #main [data-reveal].shown {
+    transform: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MÀN HÌNH MỞ THIỆP -->
+<section id="cover" class="cover">
+
+  <img src="./assets/images/anh-01.jpg"
+       alt="Ảnh cưới Tiến Mạnh và Mỹ Linh">
+
+  <div class="coverShade"></div>
+
+  <div class="coverText">
+    <p class="eyebrow">THE WEDDING OF</p>
+
+    <h1>Tiến Mạnh & Mỹ Linh</h1>
+
+    <p class="coverDate">29 . 11 . 2026</p>
+
+    <button id="openBtn"
+            class="button openButton"
+            type="button">
+      ♡ MỞ THIỆP CƯỚI ♡
+    </button>
+
+    <p>Trân trọng kính mời</p>
+  </div>
+
+</section>
+
+
+<!-- CÁNH HOA XANH -->
+<div id="petalLayer"
+     class="petalLayer"
+     aria-hidden="true"
+     hidden></div>
+
+
+<!-- NỘI DUNG CHÍNH -->
+<main id="main" hidden>
+
+  <!-- ẢNH ĐẦU TRANG -->
+  <section class="hero">
+
+    <img src="./assets/images/anh-09.jpg"
+         alt="Cô dâu và chú rể">
+
+    <div class="heroText" data-reveal="up">
+
+      <p class="eyebrow">WE ARE GETTING MARRIED</p>
+
+      <h1>Tiến Mạnh & Mỹ Linh</h1>
+
+      <p>29 . 11 . 2026</p>
+
+    </div>
+  </section>
+
+
+  <!-- THÔNG TIN GIA ĐÌNH -->
+  <section class="section">
+
+    <p class="eyebrow" data-reveal="up">
+      WEDDING INVITATION
+    </p>
+
+    <h2 data-reveal="up">
+      Trân Trọng Kính Mời
+    </h2>
+
+    <div class="ornament" data-reveal="up">❦</div>
+
+    <div class="families">
+
+      <div class="family" data-reveal="left">
+
+        <p class="eyebrow">NHÀ TRAI</p>
+
+        <h3>Ông Bà Hồng Thơi</h3>
+
+        <p>
+          Hùng Cường (Đoan Khê cũ),
+          xã Lạc Đạo, Hưng Yên
+        </p>
+
+      </div>
+
+      <div class="family" data-reveal="right">
+
+        <p class="eyebrow">NHÀ GÁI</p>
+
+        <h3>Ông Bà Duẩn Chiên</h3>
+
+        <p>
+          Ngọc Trai (Trai Túc cũ),
+          xã Như Quỳnh, Hưng Yên
+        </p>
+
+      </div>
+
+    </div>
+
+    <p data-reveal="up">
+      Trân trọng báo tin lễ thành hôn của
+    </p>
+
+    <div data-reveal="up">
+      <h2 class="handwriting">Tiến Mạnh</h2>
+      <p>Út nam</p>
+    </div>
+
+    <div class="ornament" data-reveal="up">&</div>
+
+    <div data-reveal="up">
+      <h2 class="handwriting">Mỹ Linh</h2>
+      <p>Trưởng nữ</p>
+    </div>
+
+    <p class="message" data-reveal="up">
+      Hai trái tim, một hành trình.
+      Hạnh phúc sẽ trọn vẹn hơn khi có bạn
+      cùng chia sẻ ngày đặc biệt của chúng mình.
+    </p>
+
+  </section>
+
+
+  <!-- NGÀY GIỜ TỔ CHỨC -->
+  <section class="section warm">
+
+    <p class="eyebrow" data-reveal="up">
+      SAVE THE DATE
+    </p>
+
+    <h2 data-reveal="up">Ngày Chung Đôi</h2>
+
+    <div class="ornament" data-reveal="up">♡</div>
+
+
+    <!-- LỄ THÀNH HÔN - 29/11 -->
+    <div class="eventCard" data-reveal="left">
+
+      <p class="eyebrow">WEDDING CEREMONY</p>
+
+      <h3>Lễ Thành Hôn</h3>
+
+      <p class="eventTime">13 giờ 00</p>
+
+      <p class="eventDate">
+        Chủ Nhật, ngày 29 tháng 11 năm 2026
+      </p>
+
+      <p class="lunarDate">
+        Tức ngày 21 tháng 10 năm Bính Ngọ
+        (Âm lịch)
+      </p>
+
+      <p>Được tổ chức tại tư gia</p>
+
+      <a id="calendarCeremony"
+         class="button"
+         target="_blank"
+         rel="noopener">
+        Thêm Lễ Thành Hôn Vào Lịch
+      </a>
+
+    </div>
+
+
+    <!-- BỮA CƠM THÂN MẬT - 28/11 -->
+    <div class="eventCard" data-reveal="right">
+
+      <p class="eyebrow">WEDDING CELEBRATION</p>
+
+      <h3>Trân Trọng Kính Mời Dự Bữa Cơm Thân Mật</h3>
+
+      <p class="eventTime">16 giờ 30</p>
+
+      <p class="eventDate">
+        Thứ Bảy, ngày 28 tháng 11 năm 2026
+      </p>
+
+      <p class="lunarDate">
+        Tức ngày 20 tháng 10 năm Bính Ngọ
+        (Âm lịch)
+      </p>
+
+      <p>
+        Hùng Cường (Đoan Khê cũ),
+        xã Lạc Đạo, tỉnh Hưng Yên
+      </p>
+
+      <a id="calendarDinner"
+         class="button"
+         target="_blank"
+         rel="noopener">
+        Thêm Bữa Cơm Vào Lịch
+      </a>
+
+    </div>
+
+
+    <h3 data-reveal="up">
+      Đếm Ngược Đến Lễ Thành Hôn
+    </h3>
+
+    <div id="countdown"
+         class="countdown"
+         data-reveal="up"></div>
+
+  </section>
+
+
+  <!-- ALBUM ẢNH CƯỚI -->
+  <section class="section albumSection">
+
+    <p class="eyebrow" data-reveal="up">
+      OUR LOVE STORY
+    </p>
+
+    <h2 data-reveal="up">Album Ảnh Cưới</h2>
+
+    <div class="ornament" data-reveal="up">♡</div>
+
+    <p data-reveal="up">
+      Những khoảnh khắc đáng nhớ của chúng mình
+    </p>
+
+    <div id="gallery" class="gallery">
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-01.jpg"
+             loading="lazy" alt="Ảnh cưới 1">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-02.jpg"
+             loading="lazy" alt="Ảnh cưới 2">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-03.jpg"
+             loading="lazy" alt="Ảnh cưới 3">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-04.jpg"
+             loading="lazy" alt="Ảnh cưới 4">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-05.jpg"
+             loading="lazy" alt="Ảnh cưới 5">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-06.jpg"
+             loading="lazy" alt="Ảnh cưới 6">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-07.jpg"
+             loading="lazy" alt="Ảnh cưới 7">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-08.jpg"
+             loading="lazy" alt="Ảnh cưới 8">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-09.jpg"
+             loading="lazy" alt="Ảnh cưới 9">
+      </button>
+
+      <button type="button" data-reveal="photo">
+        <img src="./assets/images/anh-10.jpg"
+             loading="lazy" alt="Ảnh cưới 10">
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- GOOGLE MAPS MỚI -->
+  <section class="section">
+
+    <p class="eyebrow" data-reveal="up">
+      WEDDING LOCATION
+    </p>
+
+    <h2 data-reveal="up">
+      Địa Điểm Tổ Chức
+    </h2>
+
+    <div class="ornament" data-reveal="up">❦</div>
+
+    <p data-reveal="up">
+      Hùng Cường (Đoan Khê cũ),
+      xã Lạc Đạo, tỉnh Hưng Yên
+    </p>
+
+    <div data-reveal="up">
+      <iframe
+        id="mapFrame"
+        title="Bản đồ vị trí đám cưới"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=20.961366%2C105.990821&amp;z=17&amp;output=embed">
+      </iframe>
+    </div>
+
+    <div data-reveal="up">
+      <a
+        id="mapLink"
+        class="button"
+        href="https://goo.gl/maps/PWNRZajyaJE9cKyy7?g_st=afm"
+        target="_blank"
+        rel="noopener">
+        📍 Chỉ Đường Google Maps
+      </a>
+    </div>
+  </section>
+
+
+  <!-- HỘP QUÀ MỪNG -->
+  <section class="section warm">
+
+    <p class="eyebrow" data-reveal="up">
+      WEDDING GIFT
+    </p>
+
+    <h2 data-reveal="up">Hộp Quà Mừng</h2>
+
+    <div class="ornament" data-reveal="up">♡</div>
+
+    <p data-reveal="up">
+      Tình cảm và lời chúc phúc của mọi người
+      là món quà quý giá nhất đối với chúng mình.
+    </p>
+
+    <div data-reveal="up">
+
+      <button
+        id="giftOpenBtn"
+        class="giftButton"
+        type="button"
+        aria-label="Mở hộp quà mừng cưới">
+
+        <span class="giftShape" aria-hidden="true">
+
+          <span class="giftBody"></span>
+          <span class="giftBodyRibbon"></span>
+
+          <span class="giftTop">
+            <span class="giftLid"></span>
+            <span class="giftLidRibbon"></span>
+            <span class="giftBowLeft"></span>
+            <span class="giftBowRight"></span>
+            <span class="giftKnot"></span>
+          </span>
+
+        </span>
+
+        <span class="giftHint">
+          Chạm vào hộp quà để mở ♡
+        </span>
+
+      </button>
+
+    </div>
+  </section>
+
+
+  <!-- LỜI CẢM ƠN -->
+  <footer>
+
+    <div data-reveal="up">
+      <div class="ornament">♡</div>
+
+      <h2 class="handwriting">
+        Tiến Mạnh & Mỹ Linh
+      </h2>
+
+      <p>Thank you for celebrating with us</p>
+
+      <p>29 . 11 . 2026</p>
+    </div>
+
+  </footer>
+
+</main>
+
+
+<!-- POPUP MỘT MÃ QR -->
+<dialog id="giftDialog" class="giftDialog">
+
+  <button
+    id="giftCloseBtn"
+    class="closeDialog"
+    type="button"
+    aria-label="Đóng mã QR">
+    ✕
+  </button>
+
+  <p class="eyebrow">A GIFT OF LOVE</p>
+
+  <h2>Hộp Quà Mừng Cưới</h2>
+
+  <div class="ornament">♡</div>
+
+  <p>
+    Cảm ơn những lời chúc phúc và tình cảm
+    của bạn dành cho chúng mình.
+  </p>
+
+  <div class="qrCard">
+
+    <h3>Chú Rể</h3>
+
+    <img
+      src="./assets/qr/qr-chu-re.jpg"
+      alt="Mã QR chuyển khoản chú rể">
+
+    <p>Vietcombank</p>
+
+    <strong>338158882</strong>
+
+    <p>HOANG TIEN MANH</p>
+
+    <a
+      class="button"
+      href="./assets/qr/qr-chu-re.jpg"
+      download="qr-chu-re.jpg">
+      Lưu Mã QR
+    </a>
+
+  </div>
+
+  <p>Trân trọng cảm ơn và yêu thương ♡</p>
+
+</dialog>
+
+
+<!-- NHẠC NỀN -->
+<audio
+  id="music"
+  src="./assets/audio/nhac-nen.mp3"
+  loop
+  preload="none">
+</audio>
+
+<button
+  id="musicBtn"
+  class="musicBtn"
+  type="button"
+  hidden>
+  ♫ Bật nhạc
+</button>
+
+
+<!-- XEM ẢNH PHÓNG TO -->
+<dialog id="photoDialog" class="photoDialog">
+
+  <button
+    id="closePhoto"
+    class="closePhoto"
+    type="button">
+    ✕
+  </button>
+
+  <img id="largePhoto" alt="Ảnh cưới phóng to">
+
+</dialog>
+
+
+<script>
+(function () {
+  "use strict";
+
+  const $ = id => document.getElementById(id);
+
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  /* NGÀY GIỜ CHÍNH XÁC */
+  const ceremonyDate =
+    "2026-11-29T13:00:00+07:00";
+
+  const dinnerDate =
+    "2026-11-28T16:30:00+07:00";
+
+  const venue =
+    "Hùng Cường (Đoan Khê cũ), xã Lạc Đạo, Hưng Yên";
+
+  const cover = $("cover");
+  const main = $("main");
+  const openBtn = $("openBtn");
+  const music = $("music");
+  const musicBtn = $("musicBtn");
+
+  let opened = false;
+  let petalsStarted = false;
+
+  /* HIỆU ỨNG HIỆN KHI CUỘN */
+
+  const revealElements = Array.from(
+    main.querySelectorAll("[data-reveal]")
+  );
+
+  // Chỉ bật CSS hiệu ứng sau khi trang đã mở.
+  function showOnScroll() {
+    if (main.hidden) return;
+
+    const limit = window.innerHeight * 0.90;
+
+    revealElements.forEach(function (element) {
+      if (element.classList.contains("shown")) return;
+
+      const rect = element.getBoundingClientRect();
+
+      if (rect.top < limit && rect.bottom > 0) {
+        element.classList.add("shown");
+      }
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    showOnScroll,
+    { passive: true }
+  );
+
+  window.addEventListener("resize", showOnScroll);
+
+
+  /* HOA XANH BAY NGẪU NHIÊN */
+
+  const petalLayer = $("petalLayer");
+
+  const colors = [
+    "#d9e8dd",
+    "#d0e3d7",
+    "#e2eee6",
+    "#c8ddd1",
+    "#e6f0e9",
+    "#d7e6dc"
+  ];
+
+  function changePetal(petal, firstTime) {
+    const size = random(11, 22);
+    const duration = random(9, 19);
+
+    petal.style.left = random(0, 100) + "%";
+    petal.style.width = size + "px";
+    petal.style.height =
+      size * random(1.2, 1.55) + "px";
+
+    petal.style.backgroundColor =
+      colors[Math.floor(Math.random() * colors.length)];
+
+    petal.style.setProperty(
+      "--alpha",
+      random(0.35, 0.72)
+    );
+
+    petal.style.setProperty(
+      "--x1",
+      random(-50, 50) + "px"
+    );
+
+    petal.style.setProperty(
+      "--x2",
+      random(-80, 80) + "px"
+    );
+
+    petal.style.setProperty(
+      "--x3",
+      random(-110, 110) + "px"
+    );
+
+    petal.style.setProperty(
+      "--x4",
+      random(-130, 130) + "px"
+    );
+
+    if (firstTime) {
+      petal.style.setProperty(
+        "--duration",
+        duration + "s"
+      );
+
+      petal.style.setProperty(
+        "--delay",
+        -random(0, duration) + "s"
+      );
+    }
+  }
+
+  function startPetals() {
+    if (petalsStarted) return;
+
+    petalsStarted = true;
+    petalLayer.hidden = false;
+
+    const count = window.innerWidth <= 600
+      ? 20
+      : 32;
+
+    for (let i = 0; i < count; i++) {
+      const petal = document.createElement("span");
+      petal.className = "petal";
+
+      changePetal(petal, true);
+
+      petal.addEventListener(
+        "animationiteration",
+        function () {
+          changePetal(petal, false);
+        }
+      );
+
+      petalLayer.appendChild(petal);
+    }
+  }
+
+
+  /* MỞ THIỆP */
+
+  openBtn.addEventListener("click", function () {
+    if (opened) return;
+
+    opened = true;
+
+    cover.hidden = true;
+    main.hidden = false;
+
+    window.scrollTo(0, 0);
+
+    musicBtn.hidden = false;
+
+    // Khởi động hoa trước
+    startPetals();
+
+    // Cho trình duyệt vẽ một khung hình
+    // trước khi kích hoạt hiệu ứng cuộn.
+    requestAnimationFrame(function () {
+      document.documentElement.classList.add(
+        "motion-ready"
+      );
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(showOnScroll);
+      });
+    });
+
+    music.play().catch(function () {
+      musicBtn.textContent = "♫ Bật nhạc";
+    });
+  });
+
+
+  /* NHẠC CƯỚI */
+
+  function updateMusicText() {
+    musicBtn.textContent = music.paused
+      ? "♫ Bật nhạc"
+      : "♫ Tắt nhạc";
+  }
+
+  music.addEventListener("play", updateMusicText);
+  music.addEventListener("pause", updateMusicText);
+
+  musicBtn.addEventListener("click", function () {
+    if (music.paused) {
+      music.play().catch(function () {
+        musicBtn.textContent = "♫ Bật nhạc";
+      });
+    } else {
+      music.pause();
+    }
+  });
+
+
+  /* HỘP QUÀ VÀ QR */
+
+  const giftButton = $("giftOpenBtn");
+  const giftDialog = $("giftDialog");
+
+  let giftOpening = false;
+
+  giftButton.addEventListener("click", function () {
+    if (giftOpening || giftDialog.open) return;
+
+    giftOpening = true;
+    giftButton.classList.add("opening");
+
+    setTimeout(function () {
+      giftButton.classList.remove("opening");
+      giftDialog.showModal();
+      giftOpening = false;
+    }, 320);
+  });
+
+  $("giftCloseBtn").addEventListener(
+    "click",
+    function () {
+      giftDialog.close();
+    }
+  );
+
+  giftDialog.addEventListener("click", function (event) {
+    const rect = giftDialog.getBoundingClientRect();
+
+    const outside =
+      event.clientX < rect.left ||
+      event.clientX > rect.right ||
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom;
+
+    if (outside) {
+      giftDialog.close();
+    }
+  });
+
+
+  /* XEM ẢNH PHÓNG TO */
+
+  const photoDialog = $("photoDialog");
+
+  $("gallery").addEventListener(
+    "click",
+    function (event) {
+      const button = event.target.closest("button");
+      if (!button) return;
+
+      const image = button.querySelector("img");
+
+      $("largePhoto").src = image.src;
+      $("largePhoto").alt = image.alt;
+
+      photoDialog.showModal();
+    }
+  );
+
+  $("closePhoto").addEventListener(
+    "click",
+    function () {
+      photoDialog.close();
+    }
+  );
+
+
+  /* THÊM HAI SỰ KIỆN VÀO GOOGLE CALENDAR */
+
+  function calendarDate(date) {
+    return date.toISOString()
+      .replace(/[-:]/g, "")
+      .replace(/\.\d{3}Z$/, "Z");
+  }
+
+  function calendarLink(title, startString) {
+    const start = new Date(startString);
+
+    // Thời lượng trên lịch tạm tính: 90 phút
+    const end = new Date(
+      start.getTime() + 90 * 60 * 1000
+    );
+
+    const params = new URLSearchParams({
+      action: "TEMPLATE",
+      text: title,
+      dates:
+        calendarDate(start) +
+        "/" +
+        calendarDate(end),
+      location: venue,
+      details: "Thiệp cưới Tiến Mạnh & Mỹ Linh"
+    });
+
+    return "https://calendar.google.com/calendar/render?" +
+      params.toString();
+  }
+
+  $("calendarCeremony").href = calendarLink(
+    "Lễ Thành Hôn Tiến Mạnh & Mỹ Linh",
+    ceremonyDate
+  );
+
+  $("calendarDinner").href = calendarLink(
+    "Bữa cơm thân mật Tiến Mạnh & Mỹ Linh",
+    dinnerDate
+  );
+
+
+  /* ĐỒNG HỒ ĐẾM NGƯỢC ĐẾN LỄ THÀNH HÔN */
+
+  const weddingTime = new Date(
+    ceremonyDate
+  ).getTime();
+
+  function updateCountdown() {
+    const remaining = weddingTime - Date.now();
+    const box = $("countdown");
+
+    if (remaining <= 0) {
+      box.textContent = "Ngày vui đã đến! ♡";
+      return;
+    }
+
+    const values = [
+      [Math.floor(remaining / 86400000), "Ngày"],
+      [Math.floor((remaining / 3600000) % 24), "Giờ"],
+      [Math.floor((remaining / 60000) % 60), "Phút"],
+      [Math.floor((remaining / 1000) % 60), "Giây"]
+    ];
+
+    box.replaceChildren();
+
+    values.forEach(function (item) {
+      const cell = document.createElement("div");
+      cell.className = "countBox";
+
+      const number = document.createElement("strong");
+      number.textContent =
+        String(item[0]).padStart(2, "0");
+
+      const label = document.createElement("span");
+      label.textContent = item[1];
+
+      cell.appendChild(number);
+      cell.appendChild(label);
+      box.appendChild(cell);
+    });
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  console.log("Thiệp cưới đã cập nhật ngày giờ và Google Maps.");
+})();
+</script>
+
+</body>
+</html>
